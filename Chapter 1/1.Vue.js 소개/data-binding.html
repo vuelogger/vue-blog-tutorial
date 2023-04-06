@@ -1,0 +1,28 @@
+<div id="app">
+  <div>{{ greeting }}</div>
+  <span>{{ greeting }}</span>
+  <i>{{ greeting }}</i>
+  <strong>{{ greeting }}</strong>
+</div>
+
+<script type="module">
+  import {
+    createApp,
+    ref,
+  } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+
+  const app = {
+    setup() {
+      const greeting = ref("안녕하세요");
+
+      // 3초 뒤에 값을 바꾸기
+      setTimeout(() => {
+        greeting.value = "안녕히가세요";
+      }, 3000);
+
+      return { greeting };
+    },
+  };
+
+  createApp(app).mount("#app");
+</script>
