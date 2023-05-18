@@ -1,6 +1,6 @@
 <template>
   <main class="post-list">
-    <h2>카테고리 : {{ selectedCategory }}</h2>
+    <h2 class="category">카테고리 : {{ selectedCategory }}</h2>
     <ul>
       <li v-for="item in postList[selectedCategory]" :key="item.id">
         {{ item.title }}
