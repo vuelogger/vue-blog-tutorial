@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref } from "vue";
 import { NotionRenderer, getPageBlocks } from "vue-notion";
 
 const props = defineProps(["id"]);
